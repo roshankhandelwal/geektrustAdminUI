@@ -1,9 +1,10 @@
-# Create React App
+# Geektrust ADMIN UI challenge URL
+https://www.geektrust.com/coding/detailed/admin-ui
 
+## Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `yarn start`
@@ -84,7 +85,7 @@ yarn add react-icons
 - https://www.freecodecamp.org/news/how-to-use-react-icons/
 
 
-Requirements
+## Requirements
 1. Column titles must stand out from the entries.
 2. There should be a search bar that can filter on any property.
 3. You should be able to edit or delete rows in place.(There is no expectation of persistence. Edit and delete are expected to only happen in memory.)
