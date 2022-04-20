@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/geektrustAdminUI/static/css/main.506c6cfb.css",
-    "main.js": "/geektrustAdminUI/static/js/main.acd9860b.js",
+    "main.js": "/geektrustAdminUI/static/js/main.c910b2cc.js",
     "static/js/787.6b58acbb.chunk.js": "/geektrustAdminUI/static/js/787.6b58acbb.chunk.js",
     "index.html": "/geektrustAdminUI/index.html",
     "main.506c6cfb.css.map": "/geektrustAdminUI/static/css/main.506c6cfb.css.map",
-    "main.acd9860b.js.map": "/geektrustAdminUI/static/js/main.acd9860b.js.map",
+    "main.c910b2cc.js.map": "/geektrustAdminUI/static/js/main.c910b2cc.js.map",
     "787.6b58acbb.chunk.js.map": "/geektrustAdminUI/static/js/787.6b58acbb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.506c6cfb.css",
-    "static/js/main.acd9860b.js"
+    "static/js/main.c910b2cc.js"
   ]
 }
