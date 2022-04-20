@@ -57,9 +57,14 @@ export function Pagination() {
 
 
     return (
-        <div className="flex flex-row items-center gap-x-0.5">
-            {pageList.length > 0 && pageList.map(page => page)}
-        </div>
+        <>
+            {pageList.length > 0 && 
+                <div className="flex flex-row items-center gap-x-0.5">
+                    {pageList.map(page => page)}
+                </div>
+            }
+        </>
+       
         
     )
 }

@@ -1,4 +1,4 @@
-import { SearchObj, User } from "../models/user";
+import { User } from "../models/user";
 
 const initialData = [
     {
@@ -279,19 +279,8 @@ const initialData = [
     }
 ]
 
-
-async function getUsersList(searchObj? : SearchObj) {
-    const {pageNum, rowsCount, searchTerm} = {...{pageNum : 1, rowsCount : 10, searchTerm : ''}, ...searchObj};
-    // console.log(pageNum, rowsCount, searchTerm);
-
+async function getUsersList() {
     let data = [...initialData];
-
-    if (searchTerm !== '') {
-
-    } else {
-        data = data.slice((pageNum - 1)* 10, rowsCount);
-    }
-
     return new Promise<Array<User>>((resolve, reject) => {
         setTimeout(() => resolve(data), 3000);
     });
