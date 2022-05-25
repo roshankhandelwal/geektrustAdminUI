@@ -12,7 +12,7 @@ interface PaginationBtnObj {
     changePage: (pageNum: number) => void 
 }
 
-const PaginationButton : React.FC<PaginationBtnObj> = 
+export const PaginationButton : React.FC<PaginationBtnObj> = 
         ({value, isEnabled, isActive, children, changePage}) => {
     return (
         <div className={`rounded-full w-8 h-8 flex items-center justify-center mr-4 cursor-pointer
