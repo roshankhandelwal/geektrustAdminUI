@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { UserContext } from "../contexts/userContext";
 import EditRow from "../molecules/EditRow";
 import Loader from "../molecules/Loader";
+import { UserCard } from "../molecules/UserCard";
 import { ViewRow } from "../molecules/ViewRow";
 import { getUsersList } from "../services/userService";
 
@@ -35,7 +36,22 @@ export function UserGrid() {
         <>
             {
                 !loader && 
-                    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-4 min-h-[580px]">
+                    <div className="showOnSmallScreens">
+                        {
+                            visibleUserList.length > 0 && 
+                                visibleUserList.map((user, index) => {
+                                    return (
+                                        <React.Fragment key={user.id}>
+                                            <UserCard index={index} listLength={visibleUserList.length} user={user} setForEdit={setRowEdit}></UserCard>
+                                        </React.Fragment>
+                                    )
+                                })
+                        }
+                    </div>
+            }
+            {
+                !loader && 
+                    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-4 min-h-[580px] table-auto showOnLargeScreens">
                         <thead className="text-xs text-gray-700">
                             <tr>
                                 <th scope="col" className="px-6 py-3 text-lg">
@@ -47,7 +63,7 @@ export function UserGrid() {
                                         ></input>
                                     }
                                 </th>
-                                <th scope="col" className="px-6 py-3 grow">
+                                <th scope="col" className="px-6 py-3">
                                     Name
                                 </th>
                                 <th scope="col" className="px-6 py-3">

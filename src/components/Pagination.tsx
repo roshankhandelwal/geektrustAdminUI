@@ -15,7 +15,7 @@ interface PaginationBtnObj {
 export const PaginationButton : React.FC<PaginationBtnObj> = 
         ({value, isEnabled, isActive, children, changePage}) => {
     return (
-        <div className={`rounded-full w-8 h-8 flex items-center justify-center mr-4 cursor-pointer
+        <div className={`rounded-full w-8 h-8 flex items-center justify-center mr-4  mt-2 cursor-pointer
             ${isActive ? 'bg-white text-sky-500 border border-sky-500' : 
                 isEnabled ? 'bg-sky-500 text-white' : 'bg-gray-200 text-gray-400 border border-gray-200 cursor-not-allowed'}`}
             onClick = {e => isEnabled && changePage(value)}
@@ -59,7 +59,7 @@ export function Pagination() {
     return (
         <>
             {pageList.length > 0 && 
-                <div className="flex flex-row items-center gap-x-0.5">
+                <div className="flex flex-row items-center gap-x-0.5 flex-wrap">
                     {pageList.map(page => page)}
                 </div>
             }

@@ -61,7 +61,7 @@ function reducer(state: State, action: any) : State {
             startingRecord = (payload - 1) * 10;
             return {...state, 
                 pageNum: payload,
-                visibleUserList: [...state.usersList].slice(startingRecord, startingRecord + state.countPerPage)
+                visibleUserList: [...state.usersList].slice(startingRecord, startingRecord + state.countPerPage),
             }
         case 'DELETE_SELECTED':
             // Need to change initialData, and whatever page you are on - get the full 10 records & set it on visibleUserList

@@ -1,0 +1,16 @@
+@media only screen and (max-width: 600px) {
+    .showOnSmallScreens  {
+        display:flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .showOnLargeScreens {
+        display: none;
+    }
+}
+
+
+.showOnSmallScreens {
+    display: none;
+}

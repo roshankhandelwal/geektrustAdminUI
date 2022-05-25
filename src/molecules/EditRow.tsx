@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { MdClose, MdCheck } from "react-icons/md";
 import { UserContext } from "../contexts/userContext";
 import { User } from "../models/user";
@@ -7,15 +7,17 @@ import EditInput from "./EditInput";
 const EditRow : React.FC<{index: number, listLength: number, user: User, setForEdit: (userId: string) => void}> = ({index, listLength, user, setForEdit}) => {
     const {userEditCompleted} = useContext(UserContext);
 
-    const [userModifed, setUserModified] = useState(user);
+    // const [userModifed, setUserModified] = useState(user);
+    const userModified = useRef(user);
 
     function changeUserDetails(property: string, value: string) {
-        setUserModified(user => ({...user, [property]: value}));
+        userModified.current = {...userModified.current, [property]: value};
+        // setUserModified(user => ({...user, [property]: value}));
         // console.log(userModifed);
     }
 
     function persistEditChanges() {
-        userEditCompleted(userModifed);
+        userEditCompleted(userModified.current);
         setForEdit('-1');
     }
 
